@@ -6,6 +6,18 @@
 
   <label>Post Description</label><br>
   <%= text_area_tag :description, @post.description %><br>
-  
+
   <%= submit_tag "Submit Post" %>
+<% end %>
+
+<%= form_for @post do |f| %>
+
+<label>Post Title</label>
+<%= f.text_field :title %><br />
+
+<label>Post Title</label>
+<%= f.text_field :description %><br />
+
+<%= f.submit %>
+
 <% end %>
